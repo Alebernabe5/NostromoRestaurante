@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nostromo</title>
+	<link rel="stylesheet" href="CSS/Style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<script src="JS/Scripts.js"></script>
+
+	<!-- Fuentes -->
+	<!-- Roboto -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+	<!-- Niconne -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet"> 
+
+	<!-- iconos de font awesome -->
+		<script src="https://kit.fontawesome.com/7701e79680.js" crossorigin="anonymous"></script>
+
+	<!-- precarga de imágenes -->
+	<link rel="preload" as="image" href="Media/Hero01.jpg">
+	<link rel="preload" as="image" href="Media/Hero02.jpg">
+	<link rel="preload" as="image" href="Media/Hero03.jpg">
+
+	<!-- aos animation library -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+<body>
+
+	<!-- aquí empieza el modal de bienvenida -->
+
+	<div id="modalBienvenida">
+		<div id="modaleBoxB">
+			<h1>Bienvenido a la web de Nostromo</h1>
+			<button onclick="cerrarMBB()">Empieza</button>
+
+		</div>
+
+	</div>
+
+	<header id="encabezado">
+
+		<div class="fondosHero" id="fondoHero1"></div>
+		<div class="fondosHero" id="fondoHero2"></div>
+		<div class="fondosHero" id="fondoHero3"></div>
+		
+		<!-- Aquí empieza el menu horizontal -->
+
+		<nav id="navbar">
+
+			<a href="Index.html">
+				<img id="logo" src="Media/Logo.png" alt="">
+			</a>
+
+
+			<ul id="menu">
+				
+				<li class="elementoMenu"><a href="#encabezado">Inicio</a></li>
+				<li class="elementoMenu"><a href="#filosofia">Filosofía</a></li>
+				<li class="elementoMenu"><a href="#carta">Carta</a>
+
+					<ul id="submenu">
+						<li class="elemSubmenu"><a href="#carta" onclick="marcarPestana('CartaPrimeros','tabPrimeros')">Primeros</a></li>
+						<li class="elemSubmenu"><a href="#carta" onclick="marcarPestana('CartaSegundos', 'tabSegundos')">Segundos</a></li>
+						<li class="elemSubmenu"><a href="#carta" onclick="marcarPestana('CartaPostres', 'tabPostres')">Postres</a></li>
+					</ul>
+				</li>
+				<li class="elementoMenu"><a href="#galeria">Galería</a></li>
+				<li class="elementoMenu"><a href="#contacto">Contacto</a></li>
+				
+			</ul>
+		</nav>
+
+
+		<h1 id="tituloEncabezado">Nostromo</h1>
+		<h2 id="subtituloEncabezado">El placer de comer bien</h2>
+
+	</header>
+
+	<section id="filosofia">
+
+		<h2 class="tituloSeccion" data-aos="fade-up">Filosofía</h2>
+		<div id="contenedorFilo">
+			
+			<div class="colFilo" data-aos="fade-up">
+				<video src="Media/Restaurant.mp4" id="videoFilo" controls poster="Media/Video.jpg"></video>
+			</div>
+			<div class="colFilo" data-aos="fade-up">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+			</div>
+
+		</div>
+	</section>
+
+
+
+
+
+	<section id="carta">
+		
+		<h2 class="tituloSeccion titulosBlanco" data-aos="fade-up" >Carta</h2>
+
+		<div id="contenedorEtiquetaPestanas" data-aos="fade-up">
+			
+			<p id="tabPrimeros" class="etiquetaPestanas pestanaActiva" onclick="marcarPestana('CartaPrimeros','tabPrimeros')">Primeros</p>
+			<p id="tabSegundos" class="etiquetaPestanas" onclick="marcarPestana('CartaSegundos', 'tabSegundos')">Segundos</p>
+			<p id="tabPostres" class="etiquetaPestanas" onclick="marcarPestana('CartaPostres', 'tabPostres')">Postres</p>
+		</div>
+
+		<div class="contenedorPestana" id="CartaPrimeros" data-aos="fade-up">
+			
+			<div class="plato">
+				<div class="imagenPlato">
+					<img src="Media/Primeros01.jpg" alt="">
+				</div>
+				<p class="nombrePlato">Nombre del plato</p>
+				<p class="precio">Precio</p>
+			</div>
+			<div class="plato">
+				<div class="imagenPlato">
+					<img src="Media/Primeros02.jpg" alt="">
+				</div>
+				<p class="nombrePlato">Nombre del plato</p>
+				<p class="precio">Precio</p>
+			</div>
+			<div class="plato">
+				<div class="imagenPlato">
+					<img src="Media/Primeros03.jpg" alt="">
+				</div>
+				<p class="nombrePlato">Nombre del plato</p>
+				<p class="precio">Precio</p>
+			</div>
+			<div class="plato">
+				<div class="imagenPlato">
+					<img src="Media/Primeros04.jpg" alt="">
+				</div>
+				<p class="nombrePlato">Nombre del plato</p>
+				<p class="precio">Precio</p>
+			</div>
+			<div class="plato">
+				<div class="imagenPlato">
+					<img src="Media/Primeros05.jpg" alt="">
+				</div>
+				<p class="nombrePlato">Nombre del plato</p>
+				<p class="precio">Precio</p>
+			</div>
+			<div class="plato">
+				<div class="imagenPlato">
+					<img src="Media/Primeros06.jpg" alt="">
+				</div>
+				<p class="nombrePlato">Nombre del plato</p>
+				<p class="precio">Precio</p>
+			</div>
+		</div>
+
+		<div class="contenedorPestana" id="CartaSegundos" data-aos="fade-up" data-aos-offset="-800">
+			
+			<div class="plato">
+				<div class="imagenPlato">
+					<img src="Media/Segundos01.jpg" alt="">
+				</div>
+				<p class="nombrePlato">Nombre del plato</p>
+				<p class="precio">Precio</p>
+			</div>
+			<div class="plato">
+				<div class="imagenPlato">
+					<img src="Media/Segundos02.jpg" alt="">
+				</div>
+				<p class="nombrePlato">Nombre del plato</p>
+				<p class="precio">Precio</p>
+			</div>
+			<div class="plato">
+				<div class="imagenPlato">
+					<img src="Media/Segundos03.jpg" alt="">
+				</div>
+				<p class="nombrePlato">Nombre del plato</p>
+				<p class="precio">Precio</p>
+			</div>
+			<div class="plato">
+				<div class="imagenPlato">
+					<img src="Media/Segundos04.jpg" alt="">
+				</div>
+				<p class="nombrePlato">Nombre del plato</p>
+				<p class="precio">Precio</p>
+			</div>
+			<div class="plato">
+				<div class="imagenPlato">
+					<img src="Media/Segundos05.jpg" alt="">
+				</div>
+				<p class="nombrePlato">Nombre del plato</p>
+				<p class="precio">Precio</p>
+			</div>
+			<div class="plato">
+				<div class="imagenPlato">
+					<img src="Media/Segundos06.jpg" alt="">
+				</div>
+				<p class="nombrePlato">Nombre del plato</p>
+				<p class="precio">Precio</p>
+			</div>
+		</div>
+
+		<div class="contenedorPestana" id="CartaPostres" data-aos="fade-up" data-aos-offset="-1500">
+			
+			<div class="plato">
+				<div class="imagenPlato">
+					<img src="Media/Postres01.jpg" alt="">
+				</div>
+				<p class="nombrePlato">Nombre del plato</p>
+				<p class="precio">Precio</p>
+			</div>
+			<div class="plato">
+				<div class="imagenPlato">
+					<img src="Media/Postres02.jpg" alt="">
+				</div>
+				<p class="nombrePlato">Nombre del plato</p>
+				<p class="precio">Precio</p>
+			</div>
+			<div class="plato">
+				<div class="imagenPlato">
+					<img src="Media/Postres03.jpg" alt="">
+				</div>
+				<p class="nombrePlato">Nombre del plato</p>
+				<p class="precio">Precio</p>
+			</div>
+			<div class="plato">
+				<div class="imagenPlato">
+					<img src="Media/Postres04.jpg" alt="">
+				</div>
+				<p class="nombrePlato">Nombre del plato</p>
+				<p class="precio">Precio</p>
+			</div>
+			<div class="plato">
+				<div class="imagenPlato">
+					<img src="Media/Postres05.jpg" alt="">
+				</div>
+				<p class="nombrePlato">Nombre del plato</p>
+				<p class="precio">Precio</p>
+			</div>
+			<div class="plato">
+				<div class="imagenPlato">
+					<img src="Media/Postres06.jpg" alt="">
+				</div>
+				<p class="nombrePlato">Nombre del plato</p>
+				<p class="precio">Precio</p>
+			</div>
+		</div>
+
+
+	</section>
+
+
+	<section id="galeria">
+		
+		<h2 class="tituloSeccion" data-aos="fade-up" >Galería</h2>
+
+		<div id="contenedorGaleria">
+			
+			<img class="imgGal" src="Media/G01.jpg" alt="" data-aos="flip-left" data-aos-delay="100">
+			<img class="imgGal" src="Media/G02.jpg" alt="" data-aos="flip-left" data-aos-delay="200">
+			<img class="imgGal" src="Media/G03.jpg" alt="" data-aos="flip-left" data-aos-delay="300">
+			<img class="imgGal" src="Media/G04.jpg" alt="" data-aos="flip-left" data-aos-delay="400">
+			<img class="imgGal" src="Media/G05.jpg" alt="" data-aos="flip-left" data-aos-delay="100">
+			<img class="imgGal" src="Media/G06.jpg" alt="" data-aos="flip-left" data-aos-delay="200">
+			<img class="imgGal" src="Media/G07.jpg" alt="" data-aos="flip-left" data-aos-delay="300">
+			<img class="imgGal" src="Media/G08.jpg" alt="" data-aos="flip-left" data-aos-delay="400">
+			<img class="imgGal" src="Media/G09.jpg" alt="" data-aos="flip-left" data-aos-delay="100">
+			<img class="imgGal" src="Media/G10.jpg" alt="" data-aos="flip-left" data-aos-delay="200">
+			<img class="imgGal" src="Media/G11.jpg" alt="" data-aos="flip-left" data-aos-delay="300">
+			<img class="imgGal" src="Media/G12.jpg" alt="" data-aos="flip-left" data-aos-delay="400">
+		
+
+
+		</div>
+
+		<div id="modalLightboxG">
+			<div id="imageToShow">
+				
+			</div>
+			<button class="lbButtons lbbRight" onclick="nextImgGal()">
+				<i class="fas fa-angle-right"></i>
+			</button>
+
+			<button class="lbButtons lbbLeft" onclick="prevImgGal()">
+				<i class="fas fa-angle-left"></i></button>
+		</div>
+
+	</section>
+	<section id="contacto">
+		
+		<h2 class="tituloSeccion titulosBlanco" data-aos="fade-up" >Contacto</h2>
+
+		<div id="contenedorContacto">
+			<iframe data-aos="fade-up" id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2991.8989147870425!2d2.1703407051117107!3d41.41971294279111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2ccbb32fbd5%3A0xf8d0febe8ebd961a!2sEscuela%20P%C3%BAblica%20Parque%20del%20Guinard%C3%B3!5e0!3m2!1ses!2ses!4v1613953069293!5m2!1ses!2ses" width="600" height="525" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			
+			<form data-aos="fade-up" action="" id="formu">
+
+				<p id="textoReservas">Reservas:</p>
+				
+				<input id="formNombre" type="text" name="Nombre" placeholder="Nombre y Apellidos" required>
+
+				<input id="formNumero" type="number" name="numero" placeholder="Número de personas" required>
+
+				<input id="formFecha" type="date" name="fecha" placeholder="Fecha" required>
+						
+				<input id="formCorreo" type="email" name="correo" placeholder="Correo" required>
+
+				<input id="botonEnviar" onclick="modalReserva()" value="Enviar">
+
+			</form>
+
+		</div>
+
+		<!-- aquí empieza el modal de reserva -->
+
+	<div id="modalReserva">
+		<div id="modaleBoxR">
+			<h1>Mensaje de confirmación de la reserva</h1>
+			<p id="mensajeReserva">Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Quaerat, eos.</p>
+			<button onclick="cerrarMBR()">Empieza</button>
+
+		</div>
+
+	</div>
+
+	</section>
+	<footer id="pie">
+		
+		<i class="fab fa-facebook-f"></i>
+		<i class="fab fa-instagram"></i>
+		<i class="fab fa-twitter"></i>
+	</footer>
+
+<script>
+
+
+	modalBienvenida();
+	
+	// setInterval(heroSlideshow,3000);
+	
+
+	readyLightbox();
+</script>
+
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
